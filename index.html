@@ -23,4 +23,8 @@
 
 <script>
 var database = firebase.database();
+
+return firebase.database().ref('/test/').once('value').then(function(snapshot) {
+  var username = (snapshot.val()) || 'Anonymous'
+});
 </script>
