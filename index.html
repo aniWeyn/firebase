@@ -24,4 +24,9 @@
     var bigOne = document.getElementById('bigOne');
     var dbRef = firebase.database().ref().child("test");
     dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+    Consoe.log("Test 2")
+    return firebase.database().ref('/test/').once('value').then(function(snapshot) {
+        bigOne.innerText = snapshot.val();
+    });
 </script>
