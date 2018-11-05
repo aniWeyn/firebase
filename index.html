@@ -27,6 +27,7 @@
 
     Consoe.log("Test 2")
     return firebase.database().ref('/test/').once('value').then(function(snapshot) {
-        bigOne.innerText = snapshot.val();
+    var result = snapshot.val();
     });
+    bigOne.innerText = result;
 </script>
