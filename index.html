@@ -26,8 +26,10 @@
     dbRef.on('value', snap => bigOne.innerText = snap.val());
 
     Consoe.log("Test 2")
-    return firebase.database().ref('/test/').once('value').then(function(snapshot) {
-    var result = snapshot.val();
+    var ref = firebase.database().ref();                           
+    ref.on("value", function(snapshot){
+    output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
     });
-    bigOne.innerText = result;
+
+
 </script>
