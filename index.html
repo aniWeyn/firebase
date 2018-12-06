@@ -25,7 +25,7 @@
     var dbRef = firebase.database().ref().child("test");
     dbRef.on('value', snap => bigOne.innerText = snap.val());
 
-    Console.log("Test 2")
+    console.log("Test 2")
     var ref = firebase.database().ref();                           
     ref.on("value", function(snapshot){
     output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
